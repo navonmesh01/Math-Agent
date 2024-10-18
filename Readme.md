@@ -8,6 +8,7 @@ The Math Agent API is an Express.js-based server application that provides a mat
 - Integration with Google Vertex AI (Gemini 1.5 Flash model)
 - RESTful API endpoint for calculations
 - Structured output with results, steps, and explanations
+- Logging in logger files for better tracking using winston logger
 
 ## Prerequisites
 
@@ -62,6 +63,18 @@ Before you begin, ensure you have met the following requirements:
        "steps": ["Used multiply function: multiply(25, 4)"],
        "explanation": "The calculation multiplies 25 by 4 to get 100."
      }
+5. Logging
+This project uses Winston for logging. Logs are written to:
+
+Console
+error.log file (for error-level logs)
+combined.log file (for all logs)
+
+Log files are stored in the project root directory.
+Log Levels
+
+info: General operational logs (e.g., server start, successful calculations)
+error: Error logs (e.g., calculation errors, server issues)
    }
    ```
 
